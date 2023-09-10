@@ -307,7 +307,9 @@ body {
     font-size: 15px;
     color: rgb(255, 255, 255);
     margin-bottom: 5px;
-    max-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 
