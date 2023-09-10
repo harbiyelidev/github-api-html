@@ -6,33 +6,55 @@
     <title>GitHub API</title>
 
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/language.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
 </head>
 <body>
-
     <section id="github-api">
+        <div class="notifications none" id="notifications">
+           <div class="notification">
+                <i class="ri-error-warning-line"></i>
+                <div class="notification-text-area">
+                    <div class="notification-header">ERROR</div>
+                    <div class="notification-description" id="notification-description"></div>
+                </div>
+           </div>
+           <i class="ri-close-line notification-close" id="notifications-close"></i>
+        </div>
         <div class="container">
             <div class="search">
                 <div class="search-text-area">
                     <div class="search-text-header"><p>GitHub API</p></div>
-                    <div class="search-text-description"><p>GitHub API’ı pekiştirmek açamlı yaptığım bu test sitesinde istediğiniz kullanıcının username’ini girip bilgilerini sağ taraftan görebilirsiniz</p></div>
+                    <div class="search-text-description"><p>GitHub API'yi anlamak ve veri çekmeyi öğrenmek amaçlı yaptığım bu site'de girdiğiniz username'in bilgilerini sağ tarafta gösterir.</p></div>
                 </div>
                 <div class="search-input">
-                    <form action="#" class="search-form">
-                        <input type="text" class="search-form-text" placeholder="Username" id="username">
-                        <input type="submit" class="search-form-submit" value="Search">
+                    <form class="search-form" id="form">
+                        <input type="text" class="search-form-text" name="username" placeholder="Username" id="username" />
+                        <div class="username-warning"><i class="ri-error-warning-line"></i> <p>Lütfen bir kullanıcı adı girin!</p></div>
+                        <button type="submit" class="search-form-submit" id="search">Search</button>
                     </form>
                 </div>
-                <div class="search-footer-area">
+                <div class="search-footer-area" id="footer">
                     <div class="search-footer-text"><p>© 2022-2023 All Rights Reserved</p></div>
                     <div class="search-footer-by"><p>Developer By <a href="http://www.github.com/VezirOni">Vezir ONI</a></p></div>
                 </div>
             </div>
-            <div class="information"></div>
+            <div class="information">
+                <div id="information-profile">
+                </div>
+                <div id="information-user">
+                </div>
+                <div class="information-project" id="information-project">
+                    <div id="information-project-header"></div>
+                    <div class="information-project-repos" id="information-project-repos"></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <script src="./js/app.js"></script>
+    <script src="./js/ui.js"></script>
     <script src="./js/github.js"></script>
+    <script src="./js/app.js"></script>
     
 </body>
 </html>
